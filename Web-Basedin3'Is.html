@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aling Remy's Atsara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #FFFDE7;
+            color: #333;
+        }
+        header {
+            background: #2E7D32;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h2 {
+            color: white;
+        }
+        header p {
+            color: #C8E6C9;
+        }
+        nav {
+            background: #FFEB3B;
+            padding: 12px;
+            text-align: center;
+        }
+        nav a {
+            color: #1B5E20;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        section {
+            display: none;
+            padding: 25px;
+            text-align: center;
+        }
+        section.active {
+            display: block;
+        }
+        .btn {
+            background: #FFEB3B;
+            color: #1B5E20;
+            padding: 12px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+            border-top: 6px solid #81C784;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
+            background: #FFFDE7;
+        }
+        .card h3 {
+            color: #2E7D32;
+        }
+        .price {
+            color: #2E7D32;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .box {
+            background: white;
+            margin: 15px auto;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+            border-top: 6px solid #81C784;
+        }
+        .box h2 {
+            text-align: center;
+            color: #2E7D32;
+        }
+        input, textarea {
+            width: 95%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        footer {
+            background: #2E7D32;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>ALING REMY'S ATSARA</h2>
+        <p>Homemade | Fresh | Affordable</p>
+    </header>
+    <nav>
+        <a onclick="show('home')">Home</a>
+        <a onclick="show('menu')">Menu</a>
+        <a onclick="show('contact')">Contact Us</a>
+        <a onclick="show('about')">About the Product</a>
+    </nav>
+    <section id="home" class="active">
+        <h1 style="color:#2E7D32">The Delicious Taste of Homemade Atsara!</h1>
+        <p>Made from fresh papaya, carrots, and bell pepper. A perfect partner for fried and grilled dishes.</p>
+        <img src="atsara2.jpg" style="width:300px;border-radius:15px">
+        <br>
+        <button class="btn" onclick="show('menu')">View Menu</button>
+        <button class="btn" onclick="show('about')">About the Product</button>
+    </section>
+    <section id="menu">
+        <h2 style="color:#2E7D32">OUR MENU</h2>
+        <p>Sweet Flavor of Aling Remy's Atsara</p>
+        <div class="products">
+            <div class="card">
+                <img src="atsara3.jpg" style="width:170px">
+                <h3>Sweet Atsara</h3>
+                <p>Classic sweet and sour flavor, perfect for kids and everyone</p>
+                <p class="price">Small: 50 pesos</p>
+                <p class="price">Large: 150 pesos</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="box">
+            <h2>ABOUT THE PRODUCT</h2>
+            <p><b>What is Atsara?</b><br>
+            Atsara is a Filipino pickled papaya relish. Sweet, sour, and crunchy - perfect partner for lechon, fried chicken, barbecue, and grilled dishes.</p>
+            <p><b>Our Flavor:</b><br>
+            ✅ <b>Sweet</b> - Original classic flavor</p>
+            <p><b>Ingredients:</b><br>
+            Fresh green papaya, carrots, bell pepper, onion, garlic, ginger, vinegar, sugar, and spices.</p>
+            <p><b>Why choose Aling Remy's Atsara?</b><br>
+            ✅ 100% Homemade<br>
+            ✅ Fresh ingredients from local market<br>
+            ✅ No preservatives<br>
+            ✅ Made with love by Aling Remy</p>
+            <p><b>How to store:</b> Keep refrigerated. Good for 2-3 weeks.</p>
+            <p><b>Price:</b> Small - 50 pesos | Large - 150 pesos</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="box">
+            <h2>CONTACT US</h2>
+            <p><b>Get in Touch</b></p>
+            <p>Facebook: Remedios Fontecha</p>
+            <p>Phone: 0995-062-2453</p>
+            <p>Email: alingremyatsara@gmail.com</p>
+            <p>Location: Blk 10 Lot 12 Sunny Field, Minuyan Norzagaray Bulacan</p>
+            <p>Open: Monday - Saturday, 8AM - 6PM</p>
+            <hr>
+            <h3 style="text-align:center">Send us a Message</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button class="btn" onclick="alert('Message sent! Thank you!')">Send Message</button>
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 Aling Remy's Atsara</p>
+    </footer>
+    <script>
+        function show(id){
+            document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
